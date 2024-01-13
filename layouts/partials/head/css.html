@@ -1,6 +1,7 @@
+{{- $vars := resources.Get "css/vars.css" }}
 {{- $simple := resources.Get "css/simple.css" }}
 {{- $main := resources.Get "css/main.css" }}
-{{- with slice $main $simple | resources.Concat "css/styles.css" }}
+{{- with slice $vars $main $simple | resources.Concat "css/styles.css" }}
   {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{- else }}
