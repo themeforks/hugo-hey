@@ -1,2 +1,14 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<a href="{{ absURL "" }}">
+  {{ $img := site.Params.avatar }}
+  {{ if .IsHome }}
+    {{ $size := 140 }}
+    <img width="{{ $size }}" height="{{ $size }}" src="{{ $img }}">
+  {{ else }}
+    {{ $size := 70 }}
+    <img width="{{ $size }}" height="{{ $size }}" src="{{ $img }}">
+  {{ end }}
+</a>
+
+{{ if .IsHome }}
+  <h1>{{ site.Title }}</h1>
+{{ end }}
