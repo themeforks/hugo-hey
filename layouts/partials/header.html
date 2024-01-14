@@ -2,10 +2,10 @@
   {{ $img := site.Params.avatar }}
   {{ if .IsHome }}
     {{ $size := 140 }}
-    <img width="{{ $size }}" height="{{ $size }}" src="{{ $img }}">
+    <img class="avatar" width="{{ $size }}" height="{{ $size }}" src="{{ $img }}">
   {{ else }}
     {{ $size := 70 }}
-    <img width="{{ $size }}" height="{{ $size }}" src="{{ $img }}">
+    <img class="avatar" width="{{ $size }}" height="{{ $size }}" src="{{ $img }}">
   {{ end }}
 </a>
 

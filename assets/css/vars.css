@@ -45,3 +45,23 @@
     opacity: 0.8;
   }
 }
+
+html {
+  --size-spacing--4: 2px;
+  --size-spacing--3: 4px;
+  --size-spacing--2: 8px;
+  --size-spacing--1: 12px;
+  --size-spacing-0: 16px;
+  --size-spacing-1: 18px;
+  --size-spacing-2: 20px;
+  --size-spacing-3: 24px;
+  --size-spacing-4: 28px;
+  --size-spacing-5: 32px;
+  --size-spacing-6: 36px;
+  --size-spacing-7: 40px;
+  --size-spacing-8: 48px;
+  --size-spacing-9: 56px;
+  --size-spacing-10: 64px;
+  --size-spacing-11: 76px;
+  --size-spacing-12: 96px;
+}
