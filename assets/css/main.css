@@ -26,11 +26,20 @@ body > footer {
 body > header {
   display: flex;
   flex-direction: column;
-  padding-block-start: var(--size-spacing-4);
+  gap: var(--size-spacing-3);
+  margin-block-start: var(--size-spacing-5);
+}
+
+body > header > h1 {
+  margin-block: 0px;
+}
+
+main {
+  margin-block: var(--size-spacing-5);
 }
 
 body > footer {
-  padding-block-start: var(--size-spacing-10);
+  margin-block-start: var(--size-spacing-8);
 }
 
 .avatar {
@@ -56,4 +65,49 @@ article > [role="list"] {
 .post-preview-link {
   font-size: 18px;
   text-decoration: none;
+}
+
+.post-title {
+  margin-block-start: 0px;
+  margin-block-end: var(--size-spacing--2);
+}
+
+.post-meta,
+.post-meta [role="list"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--size-spacing--1);
+}
+
+.post-meta [aria-label="Tags"] a::before {
+  content: "#";
+  user-select: none;
+}
+
+.markdown {
+  margin-block-start: var(--size-spacing-5);
+}
+
+:target {
+  scroll-margin-top: 2rem;
+}
+
+:where(a, button, input, textarea, summary) {
+  --outline-size: max(2px, 0.08em);
+  --outline-style: solid;
+  --outline-color: currentColor;
+}
+
+:where(a, button, input, textarea, summary):focus {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-offset, var(--outline-size));
+}
+
+:where(a, button, input, textarea, summary):focus-visible {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-offset, var(--outline-size));
+}
+
+:where(a, button, input, textarea, summary):focus:not(:focus-visible) {
+  outline: none;
 }
