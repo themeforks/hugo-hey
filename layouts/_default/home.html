@@ -1,7 +1,9 @@
 {{ define "main" }}
 <article>
   <ol role="list">
-  {{ range where .Site.RegularPages "Section" "in" .Site.MainSections }}
+  {{ $pages := where site.RegularPages "Section" "in" site.MainSections }}
+  {{ $paginator := .Paginate ($pages) }}
+  {{ range $paginator.Pages }}
   <li>
     <article class="post-preview">
     <h2 class="post-preview-title">

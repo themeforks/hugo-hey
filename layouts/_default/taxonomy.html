@@ -1,7 +1,10 @@
 {{ define "main" }}
 <article>
   <header>
-    <h1>{{ .Title }}</h1>
+    <h1>
+      <a class="term-title" href="{{ .Parent.LinkTitle | relURL | lower }}">{{ .Data.Plural }}</a>
+      {{- print ":" }} {{ .Title }}
+    </h1>
   </header>
   <ol role="list">
   {{ $pages := where .Pages "Section" "in" site.MainSections }}

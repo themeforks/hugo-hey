@@ -2,6 +2,10 @@ html {
   scrollbar-gutter: stable;
 }
 
+.emoji {
+  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
+}
+
 :where(ul, ol):where([role="list"]) {
   margin: 0;
   padding: 0;
@@ -84,8 +88,33 @@ article > [role="list"] {
   user-select: none;
 }
 
+[role=list]:has(.post-view) {
+  gap: var(--size-spacing-3);
+}
+
+.post-view p {
+  margin-block-start: var(--size-spacing--1);
+}
+
 .markdown {
   margin-block-start: var(--size-spacing-5);
+}
+
+.term-title {
+  text-transform: capitalize;
+}
+
+.terms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--size-spacing-0);
+}
+
+.terms-item {
+  background-color: var(--accent-bg);
+  display: block;
+  padding: 3px 10px;
+  border-radius: 6px;
 }
 
 :target {

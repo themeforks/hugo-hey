@@ -1,0 +1,22 @@
+{{- define "main" }}
+<article>
+  <h1 class="title">{{ .Title }}</h1>
+  <nav aria-label="{{ .Title }}">
+    <ul class="terms" role="list">
+      {{- $type := .Type }}
+      {{- range $key, $value := .Data.Terms.Alphabetical }}
+      {{- $name := .Name }}
+      {{- $count := len (where .Pages "Section" "in" site.MainSections) }}
+      {{- with $.Site.GetPage (printf "/%s/%s" $type $name) }}
+      <li>
+        <a class="terms-item" href="{{ .RelPermalink }}"  target="_self" rel="tag">
+          {{- .Name }}
+          <sup>{{ $count -}}</sup>
+        </a>
+      </li>
+      {{- end }}
+      {{- end }}
+    </ul>
+  </nav>
+</article>
+{{- end }}
