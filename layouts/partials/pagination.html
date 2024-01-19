@@ -4,8 +4,8 @@
 {{ $lower_limit := (add $adjacent_links 1) }}
 {{ $upper_limit := (sub $paginator.TotalPages $adjacent_links) }}
 {{ if gt $paginator.TotalPages 1 }}
-<nav class="grid" aria-label="pagination">
-  <ul class="pagination col" role="list">
+<nav aria-label="pagination">
+  <ul class="pagination" role="list">
     {{ if $paginator.HasPrev }}
       <li class="pagination-text-prev"><a href="{{ $paginator.Prev.URL }}" target="_self" rel="prev">Previous Page</a></li>
     {{ end }}
