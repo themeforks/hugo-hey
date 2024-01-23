@@ -67,7 +67,7 @@ p, h1, h2, h3, h4, h5, h6 {
 h1,
 h2,
 h3 {
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 /* Reduce header size on mobile */
@@ -205,8 +205,11 @@ details[open] > :last-child {
 
 /* Format tables */
 table {
-  border-collapse: collapse;
   margin: 1.5rem 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  overflow-x: auto;
+  word-break: keep-all;
 }
 
 td,
@@ -409,7 +412,6 @@ pre span,
 kbd,
 samp {
   font-family: var(--mono-font);
-  color: var(--code);
 }
 
 kbd {
@@ -418,21 +420,6 @@ kbd {
   border-bottom: 3px solid var(--preformatted);
   border-radius: var(--standard-border-radius);
   padding: 0.1rem 0.4rem;
-}
-
-pre {
-  padding: 1rem 1.4rem;
-  max-width: 100%;
-  overflow: auto;
-  color: var(--preformatted);
-}
-
-/* Fix embedded code within pre */
-pre code {
-  color: var(--preformatted);
-  background: none;
-  margin: 0;
-  padding: 0;
 }
 
 /* Progress bars */

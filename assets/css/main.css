@@ -100,6 +100,19 @@ article > [role="list"] {
   margin-block-start: var(--size-spacing-5);
 }
 
+.markdown pre code {
+  display: grid;
+  margin-block: auto;
+  margin-inline: 0px;
+  padding: 10px;
+  overflow-x: auto;
+  word-break: break-all;
+}
+
+.markdown .highlight pre {
+  margin: 0px;
+}
+
 .term-title {
   text-transform: capitalize;
 }
