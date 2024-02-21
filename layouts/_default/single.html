@@ -9,6 +9,18 @@
       {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
     </div>
   </header>
+
+  {{- if .Param "toc" }}
+  {{- $headers := findRE "<h[1-2].*?>(.|\n])+?</h[1-2]>" .Content -}}
+  {{- $has_headers := ge (len $headers) 1 -}}
+  {{- if $has_headers }}
+  <details id="toc" open>
+    <summary>Table of Contents</summary>
+    {{ .TableOfContents }}
+  </details>
+  {{ end }}
+  {{ end }}
+
   <div class="markdown">
     {{ .Content }}
   </div>

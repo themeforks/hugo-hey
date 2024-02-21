@@ -96,10 +96,6 @@ article > [role="list"] {
   margin-block-start: var(--size-spacing--1);
 }
 
-.markdown {
-  margin-block-start: var(--size-spacing-5);
-}
-
 .markdown pre code {
   display: grid;
   margin-block: auto;
@@ -128,6 +124,10 @@ article > [role="list"] {
   display: block;
   padding: 3px 10px;
   border-radius: 6px;
+}
+
+#toc {
+  margin-block-start: var(--size-spacing-4);
 }
 
 .pagination {
